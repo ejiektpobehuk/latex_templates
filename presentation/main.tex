@@ -1,0 +1,52 @@
+\documentclass[11pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{seagull}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{here}
+\author[Петров В.Д.]{Петров Владислав Дмитриевич}
+\title[Краткое название]{Полное название презентации}
+\date{\the\year} 
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+\begin{frame}{Обычный слайд текста}
+Текст сам центрируется в по высоте слайда. Центрирование по горизонтали 
+\end{frame}
+
+
+\begin{frame}{Список}
+\begin{itemize}
+	\item Элемент списка
+	\begin{itemize}
+		\item Элемент вложенного списка
+	\end{itemize}
+	\item Элемент списка
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Рисунок}
+\begin{figure}[H]
+	\includegraphics[scale=0.4]{pics/sample}
+	\label{fig:sample}
+\end{figure}
+\center{Текст под рисунком, не подпись}
+\end{frame}
+
+
+\begin{frame}{Формулы, сложна}
+Спектр (спектральная плотность) $\Phi(f)$ в общем случае представляет собой комплексную функцию: $$\Phi(f)=|\Phi(f)|*e^{i\psi(f)}$$
+Модуль этой функции $|\Phi(f)|$ называют спектром амплитуд, а зависимость $\psi(f)$ — спектром фаз.
+\end{frame}
+
+
+\end{document}
