@@ -11,7 +11,6 @@ texlive-binaries
 texlive-extra-utils
 texlive-font-utils
 texlive-fonts-recommended
-texlive-fonts-recommended-doc
 texlive-generic-recommended
 texlive-lang-cyrillic
 texlive-latex-base
