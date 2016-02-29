@@ -1,0 +1,216 @@
+%%
+%% This is file `titledefs.rtx',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% titledefs.dtx  (with options: `titledefs')
+%% 
+%% Copyright (c) 2004-2014 Stanislav Kruchinin.
+%% All rights reserved.
+%% 
+%% This file is part of the disser package.
+%% 
+
+\ProvidesFile{titledefs.rtx}
+
+\def\abstractname{\cyr\CYRA\cyrn\cyrn\cyro\cyrt\cyra\cyrc\cyri\cyrya}
+\def\titlepagename{%
+\cyr\CYRT\cyri\cyrt\cyru\cyrl\cyrsftsn\cyrn\cyrery\cyrishrt\ %
+\cyrl\cyri\cyrs\cyrt}
+\def\keywordsname{\cyr\CYRK\cyrk\cyryu\cyrch\cyre\cyrv\cyrery\cyre\ %
+\cyrs\cyrl\cyro\cyrv\cyra}
+\def\keywordslabel{\keywordsname:}
+\def\workname{\CYRR\cyra\cyrb\cyro\cyrt\cyra}
+\def\approved{\workname\ \cyrd\cyro\cyrp\cyru\cyrshch\cyre\cyrn\cyra\ %
+\cyrk\ \cyrz\cyra\cyrshch\cyri\cyrt\cyre}
+\def\appos{\cyr\cyrz\cyra\cyrv.\ \cyrk\cyra\cyrf\cyre\cyrd\cyrr\cyro\cyrishrt}
+\def\groupname{\cyr\cyrg\cyrr.}
+\def\topicname{\cyr\CYRT\cyre\cyrm\cyra}
+\def\topiclabel{\topicname:\ }
+\def\coursename{\cyr\CYRN\cyra\cyrp\cyrr\cyra\cyrv\cyrl\cyre\cyrn\cyri\cyre}
+\def\courselabel{\coursename:}
+\def\specname{%
+\cyr\CYRS\cyrp\cyre\cyrc\cyri\cyra\cyrl\cyrsftsn\cyrn\cyro\cyrs\cyrt\cyrsftsn}
+\def\speclabel{\specname:}
+\def\masterprogname{%
+\cyr\CYRM\cyra\cyrg\cyri\cyrs\cyrt\cyre\cyrr\cyrs\cyrk\cyra\cyrya\ %
+\cyrp\cyrr\cyro\cyrg\cyrr\cyra\cyrm\cyrm\cyra}
+\def\masterproglabel{\masterprogname:}
+\def\studentname{\cyr\CYRV\cyrery\cyrp\cyro\cyrl\cyrn\cyri\cyrl\ %
+\cyrs\cyrt\cyru\cyrd\cyre\cyrn\cyrt}
+\def\studentlabel{\studentname\ \groupname\ \@group\hspace{1.5cm}}
+\def\saname{\cyr\CYRN\cyra\cyru\cyrch\cyrn\cyrery\cyrishrt\ %
+\cyrr\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn}
+\def\sasndname{\saname}
+\def\salabel{\saname}
+\def\sasndlabel{\sasndname}
+\def\sconname{\cyr\CYRN\cyra\cyru\cyrch\cyrn\cyrery\cyrishrt\ %
+\cyrk\cyro\cyrn\cyrs\cyru\cyrl\cyrsftsn\cyrt\cyra\cyrn\cyrt}
+\def\sconsndname{\sconname}
+\def\sconlabel{\sconname}
+\def\sconsndlabel{\sconsndname}
+\def\revname{\cyr\CYRR\cyre\cyrc\cyre\cyrn\cyrz\cyre\cyrn\cyrt}
+\def\revsndname{\revname}
+\def\revlabel{\revname}
+\def\revsndlabel{\revsndname}
+\def\conname{\cyr\CYRK\cyro\cyrn\cyrs\cyru\cyrl\cyrsftsn\cyrt\cyra\cyrn\cyrt}
+\def\consndname{\conname}
+\def\conlabel{\conname\ \cyrp\cyro\ \@conspec}
+\def\consndlabel{\consndname\ \cyrp\cyro\ \@consndspec}
+\def\asmanuscript{\cyr\CYRN\cyra\ \cyrp\cyrr\cyra\cyrv\cyra\cyrh\ %
+\cyrr\cyru\cyrk\cyro\cyrp\cyri\cyrs\cyri}
+\def\libcatname{\cyr\CYRU\CYRD\CYRK}
+\def\consultname{%
+\cyr\CYRK\cyro\cyrn\cyrs\cyru\cyrl\cyrsftsn\cyrt\cyra\cyrn\cyrt\cyrery:}
+\def\institution#1{\gdef\@institution{#1}}\institution{}
+\def\spec#1{\gdef\@spec{#1}}\spec{}
+\def\specsnd#1{\gdef\@specsnd{#1}}\specsnd{}
+
+\def\specnum#1{\gdef\@specnum{#1}}\specnum{}
+\def\specsndnum#1{\gdef\@specsndnum{#1}}\specsndnum{}
+
+\def\course#1{\gdef\@course{#1}}\course{}
+\def\coursenum#1{\gdef\@coursenum{#1}}\coursenum{}
+\def\keywords#1{\gdef\@keywords{#1}}\keywords{}
+\def\title#1{\gdef\@title{#1}}\title{}
+\def\topic#1{\gdef\@topic{#1}}\topic{}
+\def\author#1{\gdef\@author{#1}}\author{}
+\def\city#1{\gdef\@city{#1}}\city{}
+\def\faculty#1{\gdef\@faculty{#1}}\faculty{}
+\def\department#1{\gdef\@department{#1}}\department{}
+\def\apname#1{\gdef\@apname{#1}}\apname{}
+\def\libcatnum#1{\gdef\@libcatnum{#1}}\libcatnum{}
+\def\group#1{\gdef\@group{#1}}\group{}
+\def\masterprognum#1{\gdef\@masterprognum{#1}}\masterprognum{}
+\def\masterprog#1{\gdef\@masterprog{#1}}\masterprog{}
+\date{\number\year}
+
+\def\yearname{\cyr\cyrg.}
+\let\commonsect=\textbf
+\def\postcommonsect{\ }
+\def\sa#1{\gdef\@sa{#1}}\sa{}
+\def\sasnd#1{\gdef\@sasnd{#1}}\sasnd{}
+
+\def\sastatus#1{\gdef\@sastatus{#1}}\sastatus{}
+\def\sasndstatus#1{\gdef\@sasndstatus{#1}}\sasndstatus{}
+
+\def\scon#1{\gdef\@scon{#1}}\scon{}
+\def\sconsnd#1{\gdef\@sconsnd{#1}}\sconsnd{}
+\def\sconstatus#1{\gdef\@sconstatus{#1}}\sconstatus{}
+\def\sconsndstatus#1{\gdef\@sconsndstatus{#1}}\sconsndstatus{}
+
+\def\rev#1{\gdef\@rev{#1}}\rev{}
+\def\revsnd#1{\gdef\@revsnd{#1}}\revsnd{}
+\def\revstatus#1{\gdef\@revstatus{#1}}\revstatus{}
+\def\revsndstatus#1{\gdef\@revsndstatus{#1}}\revsndstatus{}
+
+\def\con#1{\gdef\@con{#1}}\con{}
+\def\consnd#1{\gdef\@consnd{#1}}\consnd{}
+\def\conspec#1{\gdef\@conspec{#1}}\conspec{}
+\def\consndspec#1{\gdef\@consndspec{#1}}\consndspec{}
+\def\constatus#1{\gdef\@constatus{#1}}\constatus{}
+\def\consndstatus#1{\gdef\@consndstatus{#1}}\consndstatus{}
+
+\AtBeginDocument{%
+  \addto\captionsrussian{%
+    \def\contentsname{\cyr\CYRO\cyrg\cyrl\cyra\cyrv\cyrl\cyre\cyrn\cyri\cyre}
+  }
+}
+
+\providecommand*\introname{\cyr\CYRV\cyrv\cyre\cyrd\cyre\cyrn\cyri\cyre}
+\providecommand*\intro{\nchapter{\introname}}
+
+\providecommand*\reviewname{\cyr\CYRO\cyrb\cyrz\cyro\cyrr\ %
+\cyrl\cyri\cyrt\cyre\cyrr\cyra\cyrt\cyru\cyrr\cyrery}
+\providecommand*\review{\nchapter{\reviewname}}
+
+\providecommand*\conclusionname{%
+\cyr\CYRZ\cyra\cyrk\cyrl\cyryu\cyrch\cyre\cyrn\cyri\cyre
+}
+\providecommand*\conclusion{\nchapter{\conclusionname}}
+
+\providecommand*\defsname{%
+{\cyr\CYRS\cyrp\cyri\cyrs\cyro\cyrk\ %
+\cyrs\cyro\cyrk\cyrr\cyra\cyrshch\cyre\cyrn\cyri\cyrishrt\ \cyri\ %
+\cyru\cyrs\cyrl\cyro\cyrv\cyrn\cyrery\cyrh\ %
+\cyro\cyrb\cyro\cyrz\cyrn\cyra\cyrch\cyre\cyrn\cyri\cyrishrt}
+}
+\providecommand*\defs{\nchapter{\defsname}}
+
+\providecommand*\dictname{%
+{\cyr\CYRS\cyrl\cyro\cyrv\cyra\cyrr\cyrsftsn\ %
+\cyrt\cyre\cyrr\cyrm\cyri\cyrn\cyro\cyrv}
+}
+\providecommand*\dict{\nchapter{\dictname}}
+
+\AtBeginDocument{%
+  \addto\captionsrussian{%
+    \def\bibname{\cyr\CYRS\cyrp\cyri\cyrs\cyro\cyrk\ %
+    \cyrl\cyri\cyrt\cyre\cyrr\cyra\cyrt\cyru\cyrr\cyrery}
+  }
+}
+
+\AtBeginDocument{%
+  \addto\captionsrussian{%
+    \def\listfigurename{\cyr\CYRS\cyrp\cyri\cyrs\cyro\cyrk\ %
+    \cyri\cyrl\cyrl\cyryu\cyrs\cyrt\cyrr\cyra\cyrt\cyri\cyrv\cyrn\cyro%
+    \cyrg\cyro\ %
+    \cyrm\cyra\cyrt\cyre\cyrr\cyri\cyra\cyrl\cyra}
+  }
+}
+
+\disser@deflength\fieldhshift{8cm}
+
+\providecommand\diplomafield[1]{%
+  \csname #1label\endcsname,\\%
+  \csname @#1status\endcsname\>
+  \makebox[\fieldhshift][l]{\hrulefill\ \csname @#1\endcsname}
+}
+\providecommand\disserfield[1]{%
+  \begin{tabbing}
+    \hspace{\fieldhshift}\={\csname #1label\endcsname}\\
+    \>\csname @#1status\endcsname\\
+    \>\csname @#1\endcsname
+  \end{tabbing}
+}
+
+\providecommand\@approved{
+  \begin{tabbing}
+    \hspace{8cm}\={\approved}\\
+    \>\appos\\[9pt]
+    \>\makebox[8.5cm][r]{\hrulefill\ \@apname}\\[9pt]
+    \>\makebox[1.5cm][r]{<<\hrulefill>>}
+    \makebox[7cm][r]{\hrulefill\ \@date\,\yearname}
+  \end{tabbing}
+}
+
+\providecommand\datefield[1][\number\year]{<<\rule[0pt]{1cm}{.5pt}>>\ %
+\rule[0pt]{3cm}{0.5pt}\ #1~\yearname}
+
+\providecommand\mkcommonsect[3]{%
+  \@namedef{#1head}{#2}
+  \@namedef{#1section}{\commonsect{\expandafter\csname #1head\endcsname}%
+    \postcommonsect}
+  \@namedef{#1text}{#3}
+}
+\let\mkintrosect=\mkcommonsect
+
+\def\copynum#1{\gdef\@copynum{#1}}
+\copynum{1}
+\def\classlabel#1{\gdef\@classlabel{#1}}
+\classlabel{\cyr\CYRS\cyre\cyrk\cyrr\cyre\cyrt\cyrn\cyro}
+
+\def\classify{
+  \begin{flushright}
+    \@classlabel\\
+    {\cyr\CYREREV\cyrk\cyrz.~\textnumero\,\@copynum}
+  \end{flushright}
+  \vspace{2ex}
+}
+
+\providecommand\facsimile{\vskip 6pt\includegraphics[width=3cm]{facsimile}}
+
+\endinput
+%%
+%% End of file `titledefs.rtx'.
