@@ -1,0 +1,44 @@
+set grid
+#set size 0.5, 1
+#set dummy f
+
+set style line 1 lt -1 lc rgb "black"
+set style line 2 lt -1 lw 2 lc rgb "black"
+set style line 3 lt 2 lc rgb "black"
+set key right top
+#set terminal pdfcairo
+set terminal pdfcairo dashed size 3in, 3in
+#set ytics 100
+#set xtics 0.2
+#set xrange [-1:1]
+set samples 500
+set xlabel "Uвх, В"
+set ylabel "Uвых, В"
+
+set output "1.pdf"
+plot "Table1.csv" using 1:2 with lines ls 1 ti ""
+
+set output "2.pdf"
+plot "Table2.csv" using 1:2 with lines ls 1 ti ""
+
+set output "4.pdf"
+plot "Table4.csv" using 1:2 with lines ls 1 ti ""
+
+set output "5.pdf"
+plot "Table5.csv" using 1:2 with lines ls 1 ti ""
+
+set xlabel "f, Гц"
+set ylabel "20lgK, дБ"
+set terminal pdfcairo dashed size 6in, 3in
+set logscale x 2
+set output "6.pdf"
+plot "Table6.csv" using 1:5 with lines ls 1 ti ""
+unset logscale
+
+set xlabel "R1, Ом"
+set ylabel "K"
+set yrange [0:2.2]
+set output "3.pdf"
+set key right bottom
+plot "Table3.csv" using 1:5 with lines ls 3 ti "Теория", \
+"Table3.csv" using 1:6 with lines ls 1 ti "Эксперимент"
