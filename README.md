@@ -1,6 +1,6 @@
 ### Шаблоны для LaTeX'a
 ======
-Здесь вы найдёте шаблоны [презентаций](https://github.com/ejiek/latex_templates/tree/master/presentation) и [отчётов](https://github.com/ejiek/latex_templates/tree/master/report), а в дальнейшем курсовых и дипломных работ.
+Здесь вы найдёте шаблоны [презентаций](https://github.com/ejiek/latex_templates/tree/master/presentation) и [отчётов](https://github.com/ejiek/latex_templates/tree/master/report) и выпускных работ ([бакалаврская](https://github.com/ejiek/latex_templates/tree/master/bachelor_thesis) ).
 
 
 ### Правила расширения репозитория
