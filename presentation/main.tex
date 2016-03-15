@@ -42,6 +42,42 @@
 \center{Текст под рисунком, не подпись}
 \end{frame}
 
+\begin{frame}{Рисунок с позиционированием (красиво, но неудобно)}
+\begin{picture}(340,250)
+	\put(-40,18){
+		\includegraphics[width=0.5\textwidth]{pics/sample}
+	}
+	% \put(-10,18){\line(1,0){362}}	% Ориентировочные линии
+	% \put(-10,18){\line(0,1){235}}
+	% \put(-10,253){\line(1,0){362}}
+	% \put(352,18){\line(0,1){235}}
+	\put(175,130){
+		% \fbox{ % Оборачивает рамкой для более точного позиционирования (есть погрешность)
+			\begin{minipage}[t]{0.5\textwidth}
+				\begin{itemize}
+				\item Какое-то перечисление
+				\item Внизу справа
+				\item При использовании \emph{picture}
+				\item Им придется размещать все элементы слайда
+				\item Иначе результат будет трудно предсказать
+				\end{itemize}
+			\end{minipage}
+		% }
+	}	
+	\put(175,250){
+		% \fbox{ % Оборачивает рамкой для более точного позиционирования (есть погрешность)
+			\begin{minipage}[t]{0.5\textwidth}
+				\begin{figure}[H]
+				\centering
+				\includegraphics[width=\textwidth]{pics/sample}
+				\label{fig:sample}
+				\end{figure}
+				\center{Начало координат снизу слева}
+			\end{minipage}
+		% }
+	}
+\end{picture}
+\end{frame}
 
 \begin{frame}{Формулы, сложна}
 Спектр (спектральная плотность) $\Phi(f)$ в общем случае представляет собой комплексную функцию: $$\Phi(f)=|\Phi(f)|*e^{i\psi(f)}$$
