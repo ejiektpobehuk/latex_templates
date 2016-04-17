@@ -1,7 +1,7 @@
 Для установки зависимостей в Ubuntu 15.10 воспользуйтесь следующей командой:
 
 ```
-sudo apt-get install texlive-latex-extra texlive-lang-cyrillic
+sudo apt install texlive-latex-extra texlive-lang-cyrillic
 ```
 
 В итоге в системе должны быть установлены следующие пакеты:
