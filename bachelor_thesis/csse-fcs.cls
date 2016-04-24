@@ -122,7 +122,7 @@
   \setlength{\fieldhshift}{5cm}
   \setlength{\parindent}{0.7cm}
   \renewcommand{\nomlabelwidth}{2cm}
-  \singlespacing
+%  \singlespacing
 \fi
 
 \if@afourpaper
