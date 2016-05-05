@@ -1,0 +1,107 @@
+\include{settings}
+
+\begin{document}	% начало документа
+\counterwithin{lstlisting}{section}
+
+\include{titlepage}
+
+\section*{\center{Реферат}}
+
+Петров В.Д. Тема работы: Курсовой проект по дисциплине "Название предмета".- СПб.: СПбПУ, \the\year. \begin{NoHyper}{\pageref{LastPage}}\end{NoHyper}  с, рис. - \totalfigures{}, табл. - \totaltables{}, листинги - \total{listnum}, библиогр. - \total{citnum} назв.\\[1cm]
+
+ПЯТЬ, КЛЮЧЕВЫХ, СЛОВ, ИЛИ ФРАЗ\\
+
+Краткое 
+
+\thispagestyle{empty} % не нумеровать страницу
+\newpage
+
+
+
+% Содержание
+\renewcommand\contentsname{\centerline{Содержание}}
+\tableofcontents
+\newpage
+
+
+
+\section*{Введение}
+\addcontentsline{toc}{section}{Введение}
+
+
+\section{Программа работы}
+
+
+\section{Теоретическая информация}
+
+
+\section{Ход выполнения работы}
+
+\subsection{Список}
+
+\begin{itemize}
+\item первый элемент списка
+\item второй элемент списка
+\end{itemize}
+
+
+\subsection{Картинка}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=0.7]{pics/sample}
+		\caption{название картинки} 
+		\label{pic:pic_name} % название для ссылок внутри кода
+	\end{center}
+\end{figure}
+
+
+\subsection{Листинг}
+
+\captionof{lstlisting}{hell\_o.c} % для печати символ '_' требует выходной символ '\'
+\lstinputlisting[label=code:hello]{listings/hell_o.c}
+\parindent=1cm % командна \lstinputlisting сбивает параментры отступа
+Текст без отступа (следует за вставкой)
+
+Новый параграф
+
+\noindent Новый параграф с принудительно выключенным отступом
+
+
+\subsection{Частичный листинг}
+% настрока частичного ввода (требуется один раз)
+\makeatletter
+\def\lst@PlaceNumber{\llap{\normalfont
+                \lst@numberstyle{\the\lst@lineno}\kern\lst@numbersep}}
+\makeatother
+
+\captionof{lstlisting}{фрагмент hell\_o.c}
+\lstinputlisting[label=code:hello_mod, linerange={4-5}]{listings/hell_o.c}
+\parindent=1cm
+
+\subsection{Таблица}
+
+\begin{table}[H]
+	\caption{Название таблицы}
+	\begin{center}
+		\begin{tabular}{|l|l|}
+			\hline
+			top left & top right\\ \hline
+			bot left & bot right\\ \hline
+	\end{tabular}
+		\label{tabular:tab_examp}
+	\end{center}
+\end{table}
+
+\section*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+\LaTeX\ удобен для создания отчётов, так как сам следит за нумерацией таблиц, рисунков, листингов и отсылок к ним (так, например, здесь всегда будет указан номер рисунка "sample" не зависимо от того, какой он (1,2 или другой) - это рисунок \ref{pic:pic_name}). Не менее важно что весь документ оформлен в едином стиле, а исходные материалы подключаются к отчёту, а не хранятся в нём. Всё это позволяет легко получить качественный отчёт без дополнительных трат на его офрмление.
+
+Исключения, пожалуй, составляют таблицы, так как их значительно сложнее создавать кодом, нежели в графическом редакторе. Но здесь никто не запрещает использовать визуальные средства создания таблиц для \LaTeX\ . А пока всё само такое умное, можно почитать хорошую литературу \cite{saturday_is_monday}.
+
+
+\renewcommand\refname{Список использованных источников}
+\bibliography{sources}
+\addcontentsline{toc}{section}{Список использованных источников}
+
+\end{document}
