@@ -1,5 +1,4 @@
-private static boolean changesLine(final GenericTreeNode patternTree,
-								   int reportLine) {
+private static boolean changesLine(final GenericTreeNode patternTree, int reportLine) {
 	LineNumberFetcher fetcher = new LineNumberFetcher();
 	try {
 		fetcher.visit(patternTree);
