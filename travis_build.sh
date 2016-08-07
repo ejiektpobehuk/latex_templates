@@ -14,6 +14,8 @@ build_latex_template()
   pdflatex $LATEX_TEMPLATE.tex
   if [ "$LATEX_TEMPLATE" == "bachelor_thesis" ] || [ "$LATEX_TEMPLATE" == "coursework" ]; then
 	bibtex $LATEX_TEMPLATE.aux
+  elif [ "$LATEX_TEMPLATE" == "bachelor_thesis" ]; then
+	makeindex $LATEX_TEMPLATE.nlo -s nomencl.ist -o $LATEX_TEMPLATE.nls
   fi
   pdflatex $LATEX_TEMPLATE.tex
   pdflatex $LATEX_TEMPLATE.tex
