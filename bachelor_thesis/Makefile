@@ -6,14 +6,14 @@ all:
 	make pdf
 
 pdf:
-	pdflatex thesis.tex
+	pdflatex bachelor_thesis.tex
 
 bib:
-	bibtex thesis
+	bibtex bachelor_thesis
 
 nomenclature:
 	makeindex thesis.nlo -s nomencl.ist -o thesis.nls
 
 clean:
-	rm thesis.nls
-	rm thesis.pdf
+	rm -f thesis.nls
+	rm -f thesis.pdf
