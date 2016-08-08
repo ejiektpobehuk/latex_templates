@@ -17,4 +17,4 @@ matrix:
 
 script:
   - chmod +x travis_build.sh
-- docker run -v $TRAVIS_BUILD_DIR:/latex_templates lamtev/latex-build-tools /bin/bash -c " cd latex_templates && . ./travis_build.sh && build_latex_template $LATEX_TEMPLATE "
+  - docker run -v $TRAVIS_BUILD_DIR:/latex_templates lamtev/latex-build-tools /bin/bash -c " cd latex_templates && . ./travis_build.sh && build_latex_template $LATEX_TEMPLATE "
