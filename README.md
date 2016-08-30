@@ -1,4 +1,4 @@
-### Шаблоны для LaTeX'a
+### Шаблоны для LaTeX'a [![Build Status](https://travis-ci.org/ejiek/latex_templates.svg?branch=master)](https://travis-ci.org/ejiek/latex_templates)
 ======
 Здесь вы найдёте шаблоны [презентаций](https://github.com/ejiek/latex_templates/tree/master/presentation), [отчётов](https://github.com/ejiek/latex_templates/tree/master/report), а также выпускных работ ([бакалаврская](https://github.com/ejiek/latex_templates/tree/master/bachelor_thesis)).
 
