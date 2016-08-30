@@ -1,12 +1,14 @@
 language: generic
 
+sudo: required
+
 dist: trusty
 
 services:
   - docker
 
 install:
-  - docker pull lamtev/latex-build-tools
+  - docker pull lamtev/latex
 
 matrix:
   include:
@@ -17,4 +19,13 @@ matrix:
 
 script:
   - chmod +x travis_build.sh
-  - docker run -v $TRAVIS_BUILD_DIR:/latex_templates lamtev/latex-build-tools /bin/bash -c " cd latex_templates && . ./travis_build.sh && build_latex_template $LATEX_TEMPLATE "
+  - docker run -v $TRAVIS_BUILD_DIR:/latex_templates lamtev/latex /bin/bash -c " cd latex_templates && . ./travis_build.sh && build_latex_template $LATEX_TEMPLATE "
+  - sudo chmod 777 ${TRAVIS_BUILD_DIR}/${LATEX_TEMPLATE}/${LATEX_TEMPLATE}.pdf
+
+deploy:
+  provider: releases
+  api_key: "$GITHUB_DEPLOY_TOKEN"
+  file: ${TRAVIS_BUILD_DIR}/${LATEX_TEMPLATE}/${LATEX_TEMPLATE}.pdf
+  skip_cleanup: true
+  on:
+    tags: true
