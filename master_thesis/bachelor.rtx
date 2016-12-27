@@ -1,0 +1,88 @@
+%%
+%% This is file `bachelor.rtx',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% bachelor.dtx  (with options: `bachelor')
+%% 
+%% Copyright (c) 2004-2014 Stanislav Kruchinin.
+%% All rights reserved.
+%% 
+%% This file is part of the disser package.
+%% 
+
+\ProvidesFile{bachelor.rtx}
+
+\newcommand\bachelor@the{\default@the}
+\bachelor@the
+
+\if@titlepage\renewcommand\maketitle[1][]{
+\ifthenelse{\equal{#1}{en}}{\@titlepage@entrue}{\@titlepage@enfalse}
+\if@titlepage@en
+  \def\appos{Head of Department}
+  \def\approved{``Approved for defence''}
+  \def\revname{Reviewer}
+  \def\revsndname{\revname}
+  \def\revlabel{\revname}
+  \def\revsndlabel{\revsndname}
+  \def\saname{Scientific Supervisor}
+  \def\sasndname{\saname}
+  \def\salabel{\saname}
+  \def\sasndlabel{\saname}
+  \def\topicname{Topic}
+  \def\coursename{Speciality}
+  \def\studentname{Student}
+  \def\studentlabel{\studentname\hspace{6cm}}
+\fi
+
+\ifundeflength\firstskip{1.5cm}
+\ifundeflength\secondskip{1.5cm}
+\ifundeflength\thirdskip{1ex}
+\ifundeflength\fourthskip{1ex}
+\ifundeflength\fifthskip{2cm}
+\ifundeflength\sixthskip{1.5ex}
+
+\setlength\fieldhshift{8.5cm}
+
+\def\titlefont{\Large\bfseries}
+\def\topiclabelfont{\large}
+\def\topicfont{\large\bfseries}
+
+\def\workname{\CYRR\cyra\cyrb\cyro\cyrt\cyra}
+
+\thispagestyle{empty}
+\enlargethispage{1cm}
+\vspace*{-2cm}
+\begin{center}%
+  {\instfont\@institution}
+\end{center}
+
+\vskip\firstskip
+{\@approved}
+\vskip\secondskip
+
+\begin{center}%
+  {\titlefont\@title\par}%
+  \vskip\thirdskip%
+  {\topiclabelfont\topiclabel\ }%
+  {\topicfont\@topic}
+  \vskip\fourthskip\normalfont%
+  \courselabel\ \@coursenum~--\ \@course%
+\end{center}
+
+\vskip\fifthskip
+\begin{tabbing}
+  \studentlabel\=\makebox[\fieldhshift][l]{\hrulefill\ \@author}\\[\sixthskip]
+  \ifx\@sa\empty\else\diplomafield{sa}\\[\sixthskip]\fi
+  \ifx\@sasnd\empty\else\diplomafield{sasnd}\\[\sixthskip]\fi
+\end{tabbing}
+\vfill
+\begin{center}
+  {\@city\cdsep\@date}
+\end{center}
+\normalfont\clearpage
+}\fi
+\endinput
+%%
+%% End of file `bachelor.rtx'.

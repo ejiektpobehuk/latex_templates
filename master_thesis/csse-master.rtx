@@ -1,0 +1,178 @@
+%%
+%% Copyright (c) 2004-2010 Stanislav Kruchinin.
+%% All rights reserved.
+%%
+%% Modified by Marat Akhin, 2012
+%%
+
+\ProvidesFile{csse-master.rtx}
+
+\newcommand\master@the{\default@the}
+\master@the
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\if@titlepage\renewcommand\maketitle[1][]{
+\ifthenelse{\equal{#1}{en}}{\@titlepage@entrue}{\@titlepage@enfalse}
+\if@titlepage@en
+  \def\appos{Head of Department}
+  \def\approved{``Approved for defence''}
+  \def\revname{Reviewer}
+  \def\revsndname{\revname}
+  \def\revlabel{\revname}
+  \def\revsndlabel{\revsndname}
+  \def\saname{Scientific Supervisor}
+  \def\sasndname{\saname}
+  \def\salabel{\saname}
+  \def\sasndlabel{\saname}
+  \def\topicname{Topic}
+  \def\coursename{Speciality}
+  \def\studentname{Student}
+  \def\studentlabel{\studentname\hspace{6cm}}
+  \def\masterprogname{Master's Program}
+\fi
+
+\ifundeflength\firstskip{4ex}
+\ifundeflength\secondskip{8ex}
+\ifundeflength\thirdskip{2ex}
+\ifundeflength\fourthskip{0ex}
+\ifundeflength\fifthskip{16ex}
+\ifundeflength\sixthskip{1ex}
+
+\def\titlefont{\Large\bfseries}
+\def\topiclabelfont{\large}
+\def\topicfont{\large\bfseries}
+
+\thispagestyle{empty}
+\enlargethispage{2cm}
+\begin{center}
+  \instfont\@institution\par
+  \instfont\@faculty\par
+  \instfont\@department\par
+\end{center}
+
+\vskip\firstskip
+\@approved
+\vskip\secondskip
+\begin{center}
+  {\titlefont\@title}
+  \vskip\thirdskip
+  {\topiclabelfont\topiclabel}
+  {\topicfont\@topic}
+\end{center}
+\vskip\fourthskip
+%
+\begin{flushleft}
+  \courselabel\ \@coursenum\ --\ \@course\\%
+  \masterproglabel\ \@masterprognum\ --\ \@masterprog%
+\end{flushleft}
+%
+\vskip\fifthskip
+\begin{tabbing}
+  \studentlabel\=\makebox[\fieldhshift][l]{\hrulefill\ \@author}\\[\sixthskip]
+  \ifx\@sa\empty\else\diplomafield{sa}\\[\sixthskip]\fi
+  \ifx\@sasnd\empty\else\diplomafield{sasnd}\\[\sixthskip]\fi
+  \ifx\@rev\empty\else\diplomafield{rev}\\[\sixthskip]\fi
+  \ifx\@revsnd\empty\else\diplomafield{revsnd}\\[\sixthskip]\fi
+  \ifx\@con\empty\else\diplomafield{con}\\[9pt]\fi
+  \ifx\@consnd\empty\else\diplomafield{consnd}\fi
+\end{tabbing}
+\vfill
+\begin{center}
+  {\@city\cdsep\@date}
+\end{center}
+\normalfont\clearpage
+}\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cover page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\if@coverpage\newcommand\makecover[1][]{
+\ifthenelse{\equal{#1}{en}}{\@coverpage@entrue}{\@coverpage@enfalse}
+\if@coverpage@en
+  \def\appos{Head of Department}
+  \def\approved{``Approved for defence''}
+  \def\revname{Reviewer}
+  \def\revsndname{\revname}
+  \def\revlabel{\revname}
+  \def\revsndlabel{\revsndname}
+  \def\saname{Scientific Supervisor}
+  \def\sasndname{\saname}
+  \def\salabel{\saname}
+  \def\sasndlabel{\saname}
+  \def\topicname{Topic}
+  \def\coursename{Speciality}
+  \def\studentname{Student}
+  \def\studentlabel{\studentname\hspace{6cm}}
+  \def\masterprogname{Master's Program}
+\fi
+
+\def\studentlabelcover{\CYRS\cyrt\cyru\cyrd\cyre\cyrn\cyrt\ \groupname\ \@group}
+
+\ifundeflength\firstskip{4ex}
+\ifundeflength\secondskip{8ex}
+\ifundeflength\thirdskip{2ex}
+\ifundeflength\fourthskip{0ex}
+\ifundeflength\fifthskip{16ex}
+\ifundeflength\sixthskip{1ex}
+
+\newlength{\picsize}
+\settoheight{\picsize}{ \vbox{\@approved} }
+\setlength{\picsize}{\picsize - 4ex}
+
+\def\drawlogo{\hfill\includegraphics[height=\picsize]{\@logo}}
+
+\def\titlefont{\Large\bfseries}
+\def\topiclabelfont{\large}
+\def\topicfont{\large\bfseries}
+
+\thispagestyle{empty}
+\enlargethispage{2cm}
+\begin{center}
+  \instfont\@institution\par
+  \instfont\@faculty\par
+  \instfont\@department\par
+\end{center}
+
+\vskip\firstskip
+\ifx\@logo\empty\vspace*{\picsize}\else\drawlogo\fi
+\vskip\secondskip
+\begin{center}
+  {\titlefont\@title}
+  \vskip\thirdskip
+  {\topiclabelfont\topiclabel}
+  {\topicfont\@topic}
+\end{center}
+\vskip\fourthskip
+%
+\begin{center}
+  % Aligning student name as on the title page
+  \vphantom{\courselabel\ \@coursenum\ --\ \@course}\ \\%
+  \vphantom{\masterproglabel\ \@masterprognum\ --\ \@masterprog}%
+\end{center}
+%
+\vskip\fifthskip
+\begin{flushright}
+  \studentlabelcover\ \@author
+\end{flushright}
+\vfill
+\begin{center}
+  {\@city\cdsep\@date}
+\end{center}
+\normalfont\clearpage
+%
+% Cover back side
+%
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\clearpage
+\addtocounter{page}{-2}
+}\fi
+
+\endinput
+%%
+%% End of file `csse-master.rtx'.
