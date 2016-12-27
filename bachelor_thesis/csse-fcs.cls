@@ -22,6 +22,7 @@
 \RequirePackage{xstring}
 \RequirePackage{float}
 \RequirePackage{fancyhdr}
+\RequirePackage{setspace}
 
 \AtEndOfClass{\RequirePackage{caption}}
 
@@ -122,7 +123,7 @@
   \setlength{\fieldhshift}{5cm}
   \setlength{\parindent}{0.7cm}
   \renewcommand{\nomlabelwidth}{2cm}
-%  \singlespacing
+  \singlespacing
 \fi
 
 \if@afourpaper
