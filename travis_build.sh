@@ -13,7 +13,7 @@ build_latex_template()
   
   pdflatex $LATEX_TEMPLATE.tex
   case "$LATEX_TEMPLATE" in
-	"bachelor_thesis" )
+	"bachelor_thesis"|"master_thesis" )
 		bibtex $LATEX_TEMPLATE.aux
 		makeindex $LATEX_TEMPLATE.nlo -s nomencl.ist -o $LATEX_TEMPLATE.nls
 	;;

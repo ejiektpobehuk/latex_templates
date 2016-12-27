@@ -13,6 +13,7 @@ install:
 matrix:
   include:
     - env: LATEX_TEMPLATE="bachelor_thesis"
+    - env: LATEX_TEMPLATE="master_thesis"
     - env: LATEX_TEMPLATE="coursework"
     - env: LATEX_TEMPLATE="presentation"
     - env: LATEX_TEMPLATE="report"
