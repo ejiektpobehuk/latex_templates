@@ -21,6 +21,8 @@ matrix:
 script:
   - chmod +x travis_build.sh
   - docker run -v $TRAVIS_BUILD_DIR:/latex_templates lamtev/latex /bin/bash -c " cd latex_templates && . ./travis_build.sh && build_latex_template $LATEX_TEMPLATE "
+
+before_deploy:
   - sudo chmod 777 ${TRAVIS_BUILD_DIR}/${LATEX_TEMPLATE}/${LATEX_TEMPLATE}.pdf
 
 deploy:
