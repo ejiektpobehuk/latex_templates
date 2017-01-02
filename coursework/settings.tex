@@ -96,8 +96,7 @@ top=2cm,bottom=2.5cm,bindingoffset=0cm]{geometry}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
 
 %%Точки нумерации заголовков
-\renewcommand{\thesection}{\arabic{section}.}
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}.}
-\renewcommand{\thesubsubsection}{\thesection\thesubsection}
-
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+\usepackage[dotinlabels]{titletoc}
 
