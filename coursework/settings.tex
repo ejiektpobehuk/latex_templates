@@ -104,3 +104,7 @@ top=2cm,bottom=2.5cm,bindingoffset=0cm]{geometry}
 \addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
 \captionsetup[figure]{labelsep = period}
 
+%% Подпись таблицы
+\DeclareCaptionFormat{hfillstart}{\hfill#1#2#3\par}
+\captionsetup[table]{format=hfillstart,labelsep=newline,justification=centering,skip=-10pt,textfont=bf}
+
