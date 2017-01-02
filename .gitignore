@@ -37,3 +37,5 @@
 *.vrb
 *.xdy
 *.tdo
+*.nls
+*.pdf #Stored in releases
