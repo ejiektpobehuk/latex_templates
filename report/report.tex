@@ -2,13 +2,11 @@
 
 \begin{document}	% начало документа
 
+% Титульная страница
 \include{titlepage}
 
-
 % Содержание
-\tableofcontents
-\newpage
-
+\include{ToC}
 
 
 \section{Цель работы}
@@ -67,13 +65,13 @@
 \subsection{Таблица}
 
 \begin{table}[H]
+	\caption{ Название таблицы}
 	\begin{center}
 		\begin{tabular}{|l|l|}
 			\hline
 			top left & top right\\ \hline
 			bot left & bot right\\ \hline
 		\end{tabular}
-		\caption{ Название таблицы}
 		\label{tabular:tab_examp}
 	\end{center}
 \end{table}

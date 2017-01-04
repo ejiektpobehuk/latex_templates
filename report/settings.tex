@@ -14,6 +14,8 @@
 \usepackage{caption}
 \renewcommand{\lstlistingname}{Программа} % заголовок листингов кода
 
+\bibliographystyle{ugost2008ls}
+
 \usepackage{listings}
 \lstset{ %
 extendedchars=\true,
@@ -40,3 +42,22 @@ texcl=true,
 
 \usepackage[left=2cm,right=2cm,
 top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%% Нумерация картинок по секциям
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+%%Точки нумерации заголовков
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+\usepackage[dotinlabels]{titletoc}
+
+%% Оформления подписи рисунка
+\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
+\captionsetup[figure]{labelsep = period}
+
+%% Подпись таблицы
+\DeclareCaptionFormat{hfillstart}{\hfill#1#2#3\par}
+\captionsetup[table]{format=hfillstart,labelsep=newline,justification=centering,skip=-10pt,textfont=bf}
+
