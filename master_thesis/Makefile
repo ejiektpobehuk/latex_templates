@@ -1,4 +1,4 @@
-TARGET?=	thesis
+TARGET?=	master_thesis
 BIBFILE?=	thesis.bib
 NOMFILE?=	thesis.nlo
 
