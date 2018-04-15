@@ -169,10 +169,10 @@
   ABSTRACT%
 }
 \newcommand\stats@report{%
-  \CYRO\cyrt\cyrch\cyre\cyrt%
+  \CYRB\cyra\cyrk\cyra\cyrl\cyra\cyrv\cyrr\cyrs\cyrk\cyra\cyrya\phantom\cyrr\cyrr\cyra\cyrb\cyro\cyrt\cyra%
 }
 \newcommand\stats@report@en{%
-  Report%
+  Bachelor thesis%
 }
 \newcommand\stats@page{%
   \cyrs\cyrt\cyrr.%
