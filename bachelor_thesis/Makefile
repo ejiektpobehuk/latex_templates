@@ -12,8 +12,8 @@ bib:
 	bibtex bachelor_thesis
 
 nomenclature:
-	makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+	makeindex bachelor_thesis.nlo -s nomencl.ist -o bachelor_thesis.nls
 
 clean:
-	rm -f thesis.nls
-	rm -f thesis.pdf
+	rm -f bachelor_thesis.nls
+	rm -f bachelor_thesis.pdf
