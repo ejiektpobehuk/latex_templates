@@ -4,6 +4,7 @@ all:
 	make nomenclature
 	make pdf
 	make pdf
+	make pdf
 
 pdf:
 	pdflatex bachelor_thesis.tex
