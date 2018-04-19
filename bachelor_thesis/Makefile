@@ -1,19 +1,22 @@
+SRC = bachelor_thesis
+
 all:
 	make pdf
 	make bib
 	make nomenclature
 	make pdf
 	make pdf
+	make pdf
 
 pdf:
-	pdflatex bachelor_thesis.tex
+	pdflatex $(SRC).tex
 
 bib:
-	bibtex bachelor_thesis
+	bibtex $(SRC)
 
 nomenclature:
-	makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+	makeindex $(SRC).nlo -s nomencl.ist -o $(SRC).nls
 
 clean:
-	rm -f thesis.nls
-	rm -f thesis.pdf
+	rm -f $(SRC).nls
+	rm -f $(SRC).pdf
