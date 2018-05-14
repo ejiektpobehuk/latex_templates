@@ -81,7 +81,8 @@
   twoside,
   titlepage,
   openright,
-  onecolumn
+  onecolumn,
+  bachelor
 }{disser}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
