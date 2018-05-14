@@ -111,7 +111,7 @@
   }
   \geometry{
     paper=a5paper,
-    nohead=true,
+    %nohead=true,
     includefoot=true,
     left=30mm,
     right=10mm,
