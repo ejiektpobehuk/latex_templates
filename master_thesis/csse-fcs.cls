@@ -130,10 +130,10 @@
     paper=a4paper,
     nohead=true,
     includefoot=true,
-    left=25mm,
-    right=25mm,
-    top=25mm,
-    bottom=25mm,
+    left=30mm,
+    right=10mm,
+    top=20mm,
+    bottom=20mm,
     footskip=15mm
   }
   \setlength{\fieldhshift}{8.5cm}
