@@ -39,3 +39,4 @@
 *.tdo
 *.nls
 *.pdf #Stored in releases
+*/*.pdf
