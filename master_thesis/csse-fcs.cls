@@ -113,10 +113,10 @@
     paper=a5paper,
     nohead=true,
     includefoot=true,
-    left=18mm,
-    right=18mm,
-    top=18mm,
-    bottom=18mm,
+    left=30mm,
+    right=10mm,
+    top=20mm,
+    bottom=20mm,
     footskip=10mm
   }
   \setlength{\fieldhshift}{5cm}
@@ -498,13 +498,17 @@
 \renewcommand{\sectionmark}[1]{ \markboth{#1}{} }
 
 \fancyhf{}
-\fancyfoot[LE,RO]{\thepage}
+\fancyhead[LE,RO]{\thepage}
+% \fancyfoot[LE,RO]{\thepage}
+% \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 \fancypagestyle{plain}{
   \fancyhf{}
-  \fancyfoot[LE,RO]{\thepage}
+  \fancyhead[LE,RO]{\thepage}
+%  \fancyfoot[LE,RO]{\thepage}
+%  \fancyhead[R]{\thepage}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
 }
