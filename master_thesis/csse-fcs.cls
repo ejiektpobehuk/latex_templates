@@ -476,13 +476,19 @@
 \setcounter{topnumber}{64}
 \setcounter{bottomnumber}{64}
 
+\DeclareCaptionFormat{hfillstart}{\hfill#1#2#3\par}
 \captionsetup{singlelinecheck=false}
 \captionsetup[figure]{%
   labelsep=period,
   justification=centering}
-\captionsetup[table]{%
-  labelsep=period,
-  justification=raggedleft}
+% \captionsetup[table]{%
+%   labelsep=period,
+%   justification=raggedleft}
+\captionsetup[table]{ 
+    format=hfillstart,
+    labelsep=newline,
+    justification=centering,
+    skip=-10pt}
 \floatname{figure}{\CYRR\cyri\cyrs\cyru\cyrn\cyro\cyrk}
 \floatname{table}{\CYRT\cyra\cyrb\cyrl\cyri\cyrc\cyra}
 

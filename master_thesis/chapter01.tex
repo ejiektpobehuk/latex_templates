@@ -17,6 +17,24 @@
 
 \Blindtext
 
+\begin{table}
+% Для таблиц с multirow и multicol необходимо вручную указать сдвиг для caption
+\captionsetup{skip=5pt}
+\caption{Example}
+\centering
+\begin{tabular}{|r|c|c|c|c|c|c|}
+\hline
+            \multirow{2}{*}{}
+           & \multicolumn{2}{c|}{LLVM IR} 
+           & \multicolumn{2}{c|}{PS} 
+           & \multicolumn{2}{c|}{AI} \\ \cline{2-7}
+           & SAT    & UNSAT   & SAT    & UNSAT   & SAT    & UNSAT   \\ \hline
+beanstalkd & 356    & 252     & 360    & 161     & 360    & 247     \\ \hline
+clib       & 599    & 258     & 960    & 234     & 960    & 449     \\ \hline
+\end{tabular}
+\label{table:checkResults}
+\end{table}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{bar}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
